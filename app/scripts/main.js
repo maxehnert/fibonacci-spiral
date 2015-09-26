@@ -1,4 +1,5 @@
-
+/*eslint-disable */
+'use strict';
 // Setup our main canvas container.
 var canvasContainer = document.getElementById('canvas-container');
 var contextContainer = canvasContainer.getContext('2d');
@@ -26,11 +27,11 @@ function createSpiralPositions(increment, a, b) {
 // End Spiral
 
 // Playing around drawing the fib spirals
-function dotsFunc(number) {
-  for(var i = 0; i < 150000; i += number) {
+function dotsFunc() {
+  for(var i = 0; i < 150000; i += 20) {
     var coords = createSpiralPositions(i, 1, 1);
 
-          var radius = 10;
+      var radius = 10;
       contextContainer.beginPath();
       contextContainer.arc(coords[0], coords[1], radius, 0, 2 * Math.PI, false);
       contextContainer.fillStyle = 'hsl( '+ Math.random() * 360+ ', 100%, 50%)';
@@ -39,7 +40,7 @@ function dotsFunc(number) {
   }
 
   for(var i = 0; i < 150000; i += 50) {
-    var coords = createSpiralPositions(i, 1,2);
+    var coords = createSpiralPositions(i, 1, 2);
 
       var radius = 10;
       contextContainer2.beginPath();
@@ -49,4 +50,17 @@ function dotsFunc(number) {
       contextContainer2.stroke();
   }
 }
-dotsFunc(20);
+dotsFunc();
+
+
+
+$( "#slider" ).slider({
+  value:100,
+  min: 0,
+  max: 500,
+  step: 50,
+  slide: function( event, ui ) {
+    $( "#amount" ).val(  ui.value );
+  }
+});
+$( "#amount" ).val( $( "#slider" ).slider( "value" ) );

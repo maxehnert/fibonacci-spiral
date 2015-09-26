@@ -15,7 +15,7 @@ $icon-font-path: '../fonts/';
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: black;
+  //background-color: black;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -37,6 +37,9 @@ body {
     padding-bottom: 19px;
   }
 }
+.container {
+  z-index: 999;
+}
 
 .container-narrow > hr {
   margin: 30px 0;
@@ -52,25 +55,25 @@ body {
 
 }
 
-#canvas-container {
+.canvas-container {
   position: relative;
   margin: auto;
   background-color: black;
   border-radius: 50%;
 }
 
-#canvas-container2 {
+.canvas-container2 {
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
   left: 0;
-  top: 0;
+  right: 0;
   z-index: 10;
-  margin: auto;
   border-radius: 50%;
   animation-name: spin;
   animation-iteration-count: infinite;
   animation: spin 10s linear infinite;
 }
-
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

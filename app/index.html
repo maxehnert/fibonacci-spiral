@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>fib spiral</title>
+    <title>Fibonacci Sequence Spiral</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -21,6 +21,9 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -34,26 +37,28 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">fib spiral</h3>
+        <h3 class="text-muted">Fibonacci Sequence Spiral</h3>
       </div>
+      <p>It Spins</p>
+      <!-- <p>
+        <label for="amount">More black bubbles</label>
+        <input type="text" id="amount" readonly style="border:0; ">
+      </p>
+      <div id="slider"></div> -->
     </div>
     <div class="canvas-contain">
-      <canvas id="canvas-container" width="1000" height="1000"></canvas>
-      <canvas id="canvas-container2" width="1000" height="1000"></canvas>
+      <canvas id="canvas-container" class="canvas-container" width="1000" height="1000"></canvas>
+      <canvas id="canvas-container2"class="canvas-container2" width="1000" height="1000"></canvas>
     </div>
 
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/plugins.js -->
 
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->

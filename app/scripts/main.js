@@ -27,22 +27,27 @@ function createSpiralPositions(increment, a, b) {
 // End Spiral
 
 // Playing around drawing the fib spirals
-function dotsFunc() {
+function dotsFunc( incrementIterator, x, y ) {
+
+  // Colored Spiral
   for( var i = 0; i < 150000; i += 20 ) {
 
       var coords = createSpiralPositions(i, 1, 1);
 
       var radius = 10;
       contextContainer.beginPath();
-      contextContainer.arc(coords[0], coords[1], radius, 0, 2 * Math.PI, false);
-      contextContainer.fillStyle = 'hsl( '+ Math.random() * 360+ ', 100%, 50%)';
+      contextContainer.arc( coords[0], coords[1], radius, 0, 2 * Math.PI, false );
+      contextContainer.fillStyle = 'hsl( ' + Math.random() * 360 + ', 100%, 50%)';
       contextContainer.fill();
       contextContainer.stroke();
   }
 
-  for( var i = 0; i < 150000; i += 50 ) {
+  // Black Spiral
+  // i += 50 is a good num for display
 
-      var coords = createSpiralPositions(i, 1, 2);
+  for( var i = 0; i < 150000; i += incrementIterator ) {
+
+      var coords = createSpiralPositions(i, x, y);
 
       var radius = 10;
       contextContainer2.beginPath();
@@ -52,4 +57,8 @@ function dotsFunc() {
       contextContainer2.stroke();
   }
 }
-dotsFunc();
+dotsFunc(80, 1, 1);
+
+$('increment-iterator').change( function() {
+  dotsFunc( $('increment-iterator').val(), 1, 2);
+})

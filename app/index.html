@@ -39,9 +39,11 @@
         </ul>
         <h3 class="text-muted">Fibonacci Sequence Spiral</h3>
       </div>
-      <p>It Spins</p>
-
+      <div class="options">
+        <input type="number" class="increment-iterator form-control" value="50">
+      </div>
     </div>
+    <br>
     <div class="canvas-contain">
       <canvas id="canvas-container" class="canvas-container" width="1000" height="1000"></canvas>
       <canvas id="canvas-container2"class="canvas-container2" width="1000" height="1000"></canvas>
@@ -50,6 +52,7 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

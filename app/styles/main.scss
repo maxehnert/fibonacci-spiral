@@ -47,7 +47,7 @@ body {
 
 @keyframes spin {
   100% {
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
   }
 }
 .canvas-contain {
@@ -72,7 +72,7 @@ body {
   border-radius: 50%;
   animation-name: spin;
   animation-iteration-count: infinite;
-  animation: spin 10s linear infinite;
+  animation: spin 5s linear infinite;
 }
 
 /* Responsive: Portrait tablets and up */

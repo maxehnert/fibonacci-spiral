@@ -61,4 +61,4 @@ dotsFunc(80, 1, 1);
 
 $('increment-iterator').change( function() {
   dotsFunc( $('increment-iterator').val(), 1, 2);
-})
+});
